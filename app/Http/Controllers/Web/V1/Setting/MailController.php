@@ -30,7 +30,7 @@ class MailController
      */
     public function show(): View
     {
-        return view('backend.layouts.settings.mail.index');
+        return view('backend.layouts.settings.mail.edit');
     }
 
     /**

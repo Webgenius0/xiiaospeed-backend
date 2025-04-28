@@ -23,6 +23,13 @@
                         <i data-feather="mail" class="nav-icon me-2 icon-xxs"></i> Email Setting
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a class="nav-link {{Route::is('v1.setting.mail.show') ? 'active': ''}}" href="{{route('v1.setting.mail.show')}}">
+                        <i data-feather="mail" class="nav-icon me-2 icon-xxs"></i> Email Setting
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

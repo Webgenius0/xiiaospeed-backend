@@ -11,4 +11,5 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require 'v1/auth.php';
+require 'v1/about.php';
 require 'v1/settings/mail.php';
