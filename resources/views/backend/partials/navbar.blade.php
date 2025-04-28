@@ -40,7 +40,6 @@
                         </div>About Section
                     </a>
                 </li>
-
                 {{-- design --}}
                 <li class="nav-item">
                     <a class="nav-link {{ Route::is('v1.design.show') ? 'active' : '' }}"
@@ -48,7 +47,8 @@
                         <div style="margin-right: 8px">
                             <svg version="1.1" id="DESIGN" xmlns="http://www.w3.org/2000/svg" width="14px"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1800 1800"
-                                enable-background="new 0 0 1800 1800" xml:space="preserve" fill="{{ Route::is('v1.design.show') ? '#624bff' : '#a3aab4' }}">
+                                enable-background="new 0 0 1800 1800" xml:space="preserve"
+                                fill="{{ Route::is('v1.design.show') ? '#624bff' : '#a3aab4' }}">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
@@ -71,6 +71,31 @@
                                 </g>
                             </svg>
                         </div>Design UI/UX
+                    </a>
+                </li>
+                {{-- Brand --}}
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is('v1.brand.show') ? 'active' : '' }}"
+                        href="{{ route('v1.brand.show') }}">
+                        <div style="margin-right: 8px">
+                            <svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" width="14px">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <g clip-path="url(#a)">
+                                        <path stroke="{{ Route::is('v1.brand.show') ? '#624bff' : '#a3aab4' }}" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="12"
+                                            d="M96 22a22.527 22.527 0 0 0-20.335 12.87c-11.068 23.616-33.396 70.46-44.464 93.949a28.578 28.578 0 0 0-2.767 12.225c0 15.994 12.963 28.957 28.957 28.957 23.744 0 61.129-39.83 61.129-67.564 0-12.438-10.082-22.521-22.52-22.521-12.439 0-22.52 10.083-22.52 22.521 0 27.734 37.384 67.564 61.128 67.564 15.992 0 28.957-12.963 28.957-28.957a28.56 28.56 0 0 0-2.768-12.225c-11.066-23.488-33.332-70.333-44.398-93.82A22.525 22.525 0 0 0 95.999 22Z">
+                                        </path>
+                                    </g>
+                                    <defs>
+                                        <clipPath id="a">
+                                            <path fill="#ffffff" d="M0 0h192v192H0z"></path>
+                                        </clipPath>
+                                    </defs>
+                                </g>
+                            </svg>
+                        </div>Brand
                     </a>
                 </li>
                 {{-- mail smtp --}}

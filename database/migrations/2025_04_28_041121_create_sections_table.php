@@ -24,11 +24,11 @@ return new class extends Migration
 
         DB::table('sections')->insert([
             [], //about page
-            [],
-            [],
-            [],
-            [],
-            [],
+            [], // design
+            [], // brainding
+            [], // development
+            [], // marketing
+            [], // support
             [],
             [],
             [],
