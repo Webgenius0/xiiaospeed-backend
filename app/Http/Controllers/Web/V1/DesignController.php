@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web\V1;
 
+use App\Helpers\Helper;
 use App\Models\Section;
 use Exception;
 use Illuminate\Http\Request;
@@ -18,18 +19,37 @@ class DesignController
         return view('backend.layouts.design.edit', compact('data'));
     }
 
-
+    /**
+     * Summary of store
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'content' => 'nullable|string',
+            'title' => 'nullable|string',
+            'sub_title' => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
+            'description' => 'nullable|string',
         ]);
+
         try {
-            $about = Section::find(2);
-            $about->description = $validatedData['content'];
-            $about->save();
+            $data = Section::find(2);
+            $image = null;
+            if (isset($validatedData['image'])) {
+                Helper::deleteFile($data['image']);
+                $image = Helper::uploadFile($validatedData['image'], 'section/design');
+            }
+            $data->update([
+                'title' => $validatedData['title'],
+                'sub_title' => $validatedData['sub_title'],
+                'image' => $image,
+                'description' => $validatedData['description'],
+            ]);
+
             return redirect()->back()->with('t-success', 'Content Saved');
         } catch (Exception $e) {
+            dd($e->getMessage());
             return redirect()->back()->with('t-error', 'Something went wrong..!');
         }
     }

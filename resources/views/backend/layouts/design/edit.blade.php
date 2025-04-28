@@ -33,7 +33,7 @@
                                                 <div class="col-md-12">
                                                     <label for="title" class="form-label">Title</label>
                                                     <input type="text" class="form-control" id="title" name="title"
-                                                        value="{{ $data['title'] }}" placeholder="smtp">
+                                                        value="{{ $data['title'] }}" placeholder="title">
                                                     @error('title')
                                                         <div class="validation-error">
                                                             {{ $message }}
@@ -42,11 +42,11 @@
                                                 </div>
 
                                                 <div class="col-md-12">
-                                                    <label for="sub_tittle" class="form-label">Sub Tittle</label>
-                                                    <input type="text" class="form-control" id="sub_tittle"
-                                                        name="sub_tittle" value="{{ $data['sub_tittle'] }}"
-                                                        placeholder="smtp">
-                                                    @error('sub_tittle')
+                                                    <label for="sub_title" class="form-label">Sub Title</label>
+                                                    <input type="text" class="form-control" id="sub_title"
+                                                        name="sub_title" value="{{ $data['sub_title'] }}"
+                                                        placeholder="sub title">
+                                                    @error('sub_title')
                                                         <div class="validation-error">
                                                             {{ $message }}
                                                         </div>
@@ -63,7 +63,7 @@
                                                 <div class="col-md-12">
                                                     <label for="image" class="form-label">Image</label>
                                                     <input type="file" class="form-control" id="image" name="image"
-                                                        value="{{ env('image') }}" placeholder="smtp">
+                                                        value="{{ env('image') }}">
                                                     @error('image')
                                                         <div class="validation-error">
                                                             {{ $message }}
@@ -72,7 +72,7 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <label for="description" class="form-label">Description</label>
-                                                    <textarea class="form-control" id="description" rows="5" name="description">{{ $data['description'] }}</textarea>
+                                                    <textarea class="form-control" id="description" rows="5" placeholder="your content..." name="description">{{ $data['description'] }}</textarea>
                                                     @error('content')
                                                         <div class="validation-error">
                                                             {{ $message }}
