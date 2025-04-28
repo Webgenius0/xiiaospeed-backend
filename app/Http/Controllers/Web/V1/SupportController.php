@@ -16,7 +16,7 @@ class SupportController
     public function show()
     {
         $data = Section::find(6);
-        return view('backend.layouts.develop.edit', compact('data'));
+        return view('backend.layouts.support.edit', compact('data'));
     }
 
     /**

@@ -16,7 +16,7 @@ class MarketController
     public function show()
     {
         $data = Section::find(5);
-        return view('backend.layouts.develop.edit', compact('data'));
+        return view('backend.layouts.market.edit', compact('data'));
     }
 
     /**
