@@ -17,10 +17,9 @@
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div id="validation" class="mb-4">
-                                        <h2 class="h3 mb-1">Email SMTP Settings</h2>
+                                        <h2 class="h3 mb-1">About Section Content</h2>
                                         <p>
-                                            Please provide your email SMTP to activate your email functionality. Without
-                                            this, the email sending feature will not work.
+                                            This form will allow you to change the section content
                                         </p>
                                     </div>
                                     <!-- Card -->
@@ -32,7 +31,7 @@
                                                 action="{{ route('v1.setting.mail.store') }}" method="POST"
                                                 enctype="multipart/form-data">
                                                 @csrf
-                                                <div class="col-md-4">
+                                                <div class="col-md-12">
                                                     <label for="mail_mailer" class="form-label">Mail Mailer</label>
                                                     <input type="text" class="form-control" id="mail_mailer"
                                                         name="mail_mailer" value="{{ env('MAIL_MAILER') }}"
@@ -113,7 +112,7 @@
                                                         <input class="form-check-input" type="checkbox"
                                                             id="condition" name="condition">
                                                         <label class="form-check-label" for="condition">
-                                                            This SMTP is mine and saved to use
+                                                            I want to Update
                                                         </label>
                                                         @error('condition')
                                                             <div class="validation-error">
@@ -140,7 +139,7 @@
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">Validation</a></li>
+                                <li><a href="#validation">About Section</a></li>
                             </ul>
                         </div>
                     </div>
