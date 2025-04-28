@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Web\V1;
 
 use App\Models\Section;
+use Exception;
 use Illuminate\Http\Request;
 
 class DesignController
@@ -13,7 +14,7 @@ class DesignController
      */
     public function show()
     {
-        $about = Section::select('description')->find(2);
+        $about = Section::find(2);
         return view('backend.layouts.design.edit', compact('about'));
     }
 
@@ -24,7 +25,7 @@ class DesignController
             'content' => 'nullable|string',
         ]);
         try {
-            $about = Section::find(1);
+            $about = Section::find(2);
             $about->description = $validatedData['content'];
             $about->save();
             return redirect()->back()->with('t-success', 'Content Saved');

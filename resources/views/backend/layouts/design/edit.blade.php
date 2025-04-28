@@ -28,35 +28,46 @@
                                         <div class="tab-content p-4" id="pills-tabContent-validation">
                                             <!-- Validation Form -->
                                             <form class="row g-3 needs-validation"
-                                                action="{{ route('v1.about.store') }}" method="POST"
+                                                action="{{ route('v1.design.store') }}" method="POST"
                                                 enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="col-md-12">
-                                                    <label for="mail_mailer" class="form-label">Mail Mailer</label>
-                                                    <input type="text" class="form-control" id="mail_mailer"
-                                                        name="mail_mailer" value="{{ env('MAIL_MAILER') }}"
+                                                    <label for="title" class="form-label">Title</label>
+                                                    <input type="text" class="form-control" id="title"
+                                                        name="title" value="{{ env('title') }}"
                                                         placeholder="smtp">
-                                                    @error('mail_mailer')
+                                                    @error('title')
                                                         <div class="validation-error">
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
                                                 </div>
 
-                                                <div class="col-md-4">
-                                                    <label for="mail_mailer" class="form-label">Mail Mailer</label>
-                                                    <input type="text" class="form-control" id="mail_mailer"
-                                                        name="mail_mailer" value="{{ env('MAIL_MAILER') }}"
+                                                <div class="col-md-12">
+                                                    <label for="sub_tittle" class="form-label">Sub Tittle</label>
+                                                    <input type="text" class="form-control" id="sub_tittle"
+                                                        name="sub_tittle" value="{{ env('sub_tittle') }}"
                                                         placeholder="smtp">
-                                                    @error('mail_mailer')
+                                                    @error('sub_tittle')
                                                         <div class="validation-error">
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="mail_mailer" class="form-label">Description</label>
-                                                    <textarea class="form-control" id="content" rows="5" name="content">{{$about['description']}}</textarea>
+                                                    <label for="image" class="form-label">Image</label>
+                                                    <input type="file" class="form-control" id="image"
+                                                        name="image" value="{{ env('image') }}"
+                                                        placeholder="smtp">
+                                                    @error('image')
+                                                        <div class="validation-error">
+                                                            {{ $message }}
+                                                        </div>
+                                                    @enderror
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <label for="description" class="form-label">Description</label>
+                                                    <textarea class="form-control" id="description" rows="5" name="description">{{$about['description']}}</textarea>
                                                     @error('content')
                                                         <div class="validation-error">
                                                             {{ $message }}
@@ -81,7 +92,7 @@
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">About Section</a></li>
+                                <li><a href="#validation">UX/UI Design</a></li>
                             </ul>
                         </div>
                     </div>
