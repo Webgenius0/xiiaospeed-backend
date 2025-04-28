@@ -107,11 +107,49 @@
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
-                                    <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20" stroke="{{ Route::is('v1.develop.show') ? '#624bff' : '#a3aab4' }}"
+                                    <path d="M7 8L3 11.6923L7 16M17 8L21 11.6923L17 16M14 4L10 20"
+                                        stroke="{{ Route::is('v1.develop.show') ? '#624bff' : '#a3aab4' }}"
                                         stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                                 </g>
                             </svg>
                         </div>Develop
+                    </a>
+                </li>
+                {{-- Market --}}
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is('v1.market.show') ? 'active' : '' }}"
+                        href="{{ route('v1.market.show') }}">
+                        <div style="margin-right: 8px">
+                            <svg fill="{{ Route::is('v1.market.show') ? '#624bff' : '#a3aab4' }}"
+                                viewBox="0 0 1000 1000" width="14px" xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M199 251L383 67v591L199 472H52V251h147zm350 111q0-48-25.5-87.5T457 213v298q41-22 66.5-61.5T549 362zm60 140q15-26 40.5-42t54.5-18q10-40 10-80 0-77-33-145.5T589 102 457 38v76q80 25 132 93t52 155-52 155-132 93v76q29-7 57-19zm297 455H521q-17 0-31-8t-22.5-22.5-8.5-31 8-30.5l193-334q8-14 22.5-22.5t31-8.5 31 8.5T767 531l193 334q8 14 8 30.5t-8.5 31T937 949t-31 8zM755 855q-1-10-8.5-17.5T728 830h-29q-11 0-18.5 7.5T672 855v26q1 11 8.5 18.5T699 907h29q11 0 18.5-7.5T755 881v-26zm2-224q0-11-8.5-18.5T729 605h-31q-11 0-19.5 7.5T670 631l9 145q0 10 7 17.5t17 7.5h20q11 0 18-7.5t7-17.5z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>Market
+                    </a>
+                </li>
+                {{-- Support --}}
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is('v1.support.show') ? 'active' : '' }}"
+                        href="{{ route('v1.support.show') }}">
+                        <div style="margin-right: 8px">
+                            <svg fill="{{ Route::is('v1.support.show') ? '#624bff' : '#a3aab4' }}"
+                                viewBox="0 0 32 32" version="1.1" width="14px"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M16 0c-8.836 0-16 7.163-16 16s7.163 16 16 16 16-7.163 16-16-7.163-16-16-16zM20 2.593c4.507 1.343 8.052 4.9 9.397 9.407h-6.486c-0.701-1.204-1.706-2.209-2.91-2.908zM21.989 16.006c0 3.311-2.681 5.994-5.989 5.994s-5.989-2.683-5.989-5.994 2.681-5.994 5.989-5.994c3.307 0 5.989 2.684 5.989 5.994zM14 2.154c0.653-0.094 1.32-0.144 2-0.144s1.346 0.051 2 0.144v6.119c-0.64-0.165-1.308-0.262-2-0.262s-1.36 0.097-2 0.262v-6.119zM12 2.593v6.499c-1.205 0.7-2.21 1.704-2.91 2.908h-6.487c1.345-4.507 4.89-8.063 9.397-9.407zM2.010 16.005c0-0.682 0.058-1.349 0.152-2.005h6.106c-0.166 0.641-0.257 1.312-0.257 2.005 0 0.69 0.091 1.357 0.255 1.995h-6.105c-0.093-0.652-0.151-1.317-0.151-1.995zM12 29.416c-4.511-1.344-8.056-4.906-9.4-9.416h6.483c0.701 1.208 1.708 2.217 2.916 2.919v6.498zM18 29.855c-0.654 0.093-1.321 0.145-2 0.145s-1.347-0.052-2-0.145v-6.118c0.64 0.166 1.308 0.262 2 0.262s1.36-0.097 2-0.262v6.118zM20 29.416v-6.498c1.208-0.701 2.216-1.71 2.916-2.919h6.483c-1.343 4.511-4.89 8.073-9.399 9.416zM23.735 18c0.164-0.637 0.255-1.305 0.255-1.995 0-0.694-0.091-1.364-0.258-2.005h6.107c0.094 0.656 0.152 1.323 0.152 2.005 0 0.678-0.058 1.343-0.151 1.995h-6.105z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </div>Support
                     </a>
                 </li>
                 {{-- mail smtp --}}
