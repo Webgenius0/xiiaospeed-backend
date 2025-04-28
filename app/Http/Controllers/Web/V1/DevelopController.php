@@ -7,7 +7,7 @@ use App\Models\Section;
 use Exception;
 use Illuminate\Http\Request;
 
-class BrandController
+class DevelopController
 {
     /**
      * show
@@ -15,8 +15,8 @@ class BrandController
      */
     public function show()
     {
-        $data = Section::find(3);
-        return view('backend.layouts.branding.edit', compact('data'));
+        $data = Section::find(4);
+        return view('backend.layouts.develop.edit', compact('data'));
     }
 
     /**
@@ -34,7 +34,7 @@ class BrandController
         ]);
 
         try {
-            $data = Section::find(3);
+            $data = Section::find(4);
             $image = null;
             if (isset($validatedData['image'])) {
                 Helper::deleteFile($data['image']);
