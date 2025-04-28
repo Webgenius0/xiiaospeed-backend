@@ -1,7 +1,7 @@
 @extends('backend.app')
 
 @section('title')
-    {{ env('APP_NAME') }} || Develop
+    {{ env('APP_NAME') }} || Market
 @endsection
 
 @section('content')
@@ -17,7 +17,7 @@
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div id="validation" class="mb-4">
-                                        <h2 class="h3 mb-1">Develop Section Content</h2>
+                                        <h2 class="h3 mb-1">Market Section Content</h2>
                                         <p>
                                             This form will allow you to change the section content
                                         </p>
@@ -27,7 +27,7 @@
                                         <!-- Tab content -->
                                         <div class="tab-content p-4" id="pills-tabContent-validation">
                                             <!-- Validation Form -->
-                                            <form class="row g-3 needs-validation" action="{{ route('v1.develop.store') }}"
+                                            <form class="row g-3 needs-validation" action="{{ route('v1.market.store') }}"
                                                 method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="col-md-12">
@@ -97,7 +97,7 @@
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">Develop</a></li>
+                                <li><a href="#validation">Market</a></li>
                             </ul>
                         </div>
                     </div>
