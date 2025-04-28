@@ -26,6 +26,22 @@
                                     <div class="mb-10 card">
                                         <!-- Tab content -->
                                         <div class="tab-content p-4" id="pills-tabContent-validation">
+                                            <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
+                                                <div class="col">
+                                                    <div class="card position-relative">
+                                                        <img src="{{ $data['image'] }}" class="card-img-top" alt="...">
+                                                        <form method="POST"
+                                                            action="{{ route('v1.section.delete.image', $data['id']) }}">
+                                                            @csrf()
+                                                            @method('DELETE')
+                                                            <button type="submit" class="btn btn-danger-soft mb-2"
+                                                                style="position: absolute; top: 10px; right: 10px;">
+                                                                Delete
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <!-- Validation Form -->
                                             <form class="row g-3 needs-validation" action="{{ route('v1.support.store') }}"
                                                 method="POST" enctype="multipart/form-data">
@@ -51,14 +67,6 @@
                                                             {{ $message }}
                                                         </div>
                                                     @enderror
-                                                </div>
-                                                <div class="row row-cols-1 row-cols-md-2 g-4">
-                                                    <div class="col">
-                                                        <div class="card">
-                                                            <img src="{{ $data['image'] }}" class="card-img-top"
-                                                                alt="...">
-                                                        </div>
-                                                    </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <label for="image" class="form-label">Image</label>
