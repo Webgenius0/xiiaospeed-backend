@@ -4,6 +4,11 @@
 <script src="{{asset('assets/backend/libs/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('assets/backend/libs/feather-icons/dist/feather.min.js')}}"></script>
 <script src="{{asset('assets/backend/libs/simplebar/dist/simplebar.min.js')}}"></script>
+<script src="{{asset('assets/backend/libs/dropzone/dist/min/dropzone.min.js')}}"></script>
+<script src="{{asset('assets/backend/libs/flatpickr/dist/flatpickr.min.js')}}"></script>
+
+  <!-- quill js -->
+  <script src="{{asset('assets/backend/libs/quill/dist/quill.min.js')}}"></script>
 
 <!-- Theme JS -->
 <script src="{{asset('assets/backend/js/theme.min.js')}}"></script>

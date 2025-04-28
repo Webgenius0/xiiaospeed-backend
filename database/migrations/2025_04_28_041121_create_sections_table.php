@@ -29,7 +29,7 @@ return new class extends Migration
             [], //4. development
             [], //4. marketing
             [], //6. support
-            [],
+            [], //7. support
             [],
             [],
             [],

@@ -4,6 +4,7 @@ use App\Http\Controllers\Web\V1\AboutController;
 use App\Http\Controllers\Web\V1\BrandController;
 use App\Http\Controllers\Web\V1\DesignController;
 use App\Http\Controllers\Web\V1\DevelopController;
+use App\Http\Controllers\Web\V1\IntroController;
 use App\Http\Controllers\Web\V1\MarketController;
 use App\Http\Controllers\Web\V1\SectionController;
 use App\Http\Controllers\Web\V1\SupportController;
@@ -53,4 +54,11 @@ Route::prefix('support')->name('v1.support.')->controller(SupportController::cla
 Route::prefix('section')->name('v1.section.')->controller(SectionController::class)
 ->group(function () {
     Route::delete('/{section}', 'destroyImage')->name('delete.image');
+});
+
+
+Route::prefix('introduction')->name('v1.introduction.')->controller(IntroController::class)
+->group(function () {
+    Route::get('/', 'show')->name('show');
+    Route::post('/', 'store')->name('store');
 });
