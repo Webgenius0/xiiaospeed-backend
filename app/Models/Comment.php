@@ -40,7 +40,7 @@ class Comment extends Model
                 return asset('storage/' . $url);
             }
         } else {
-            return asset('assets/img/user_placeholder.png');
+            return asset('assets/backend/images/placeholder/placeholder-4by3.svg');
         }
     }
 }

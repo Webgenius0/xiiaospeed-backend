@@ -14,8 +14,8 @@ class DesignController
      */
     public function show()
     {
-        $about = Section::find(2);
-        return view('backend.layouts.design.edit', compact('about'));
+        $data = Section::find(2);
+        return view('backend.layouts.design.edit', compact('data'));
     }
 
 

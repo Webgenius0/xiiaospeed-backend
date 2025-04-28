@@ -27,15 +27,13 @@
                                         <!-- Tab content -->
                                         <div class="tab-content p-4" id="pills-tabContent-validation">
                                             <!-- Validation Form -->
-                                            <form class="row g-3 needs-validation"
-                                                action="{{ route('v1.design.store') }}" method="POST"
-                                                enctype="multipart/form-data">
+                                            <form class="row g-3 needs-validation" action="{{ route('v1.design.store') }}"
+                                                method="POST" enctype="multipart/form-data">
                                                 @csrf
                                                 <div class="col-md-12">
                                                     <label for="title" class="form-label">Title</label>
-                                                    <input type="text" class="form-control" id="title"
-                                                        name="title" value="{{ env('title') }}"
-                                                        placeholder="smtp">
+                                                    <input type="text" class="form-control" id="title" name="title"
+                                                        value="{{ $data['title'] }}" placeholder="smtp">
                                                     @error('title')
                                                         <div class="validation-error">
                                                             {{ $message }}
@@ -46,7 +44,7 @@
                                                 <div class="col-md-12">
                                                     <label for="sub_tittle" class="form-label">Sub Tittle</label>
                                                     <input type="text" class="form-control" id="sub_tittle"
-                                                        name="sub_tittle" value="{{ env('sub_tittle') }}"
+                                                        name="sub_tittle" value="{{ $data['sub_tittle'] }}"
                                                         placeholder="smtp">
                                                     @error('sub_tittle')
                                                         <div class="validation-error">
@@ -54,11 +52,18 @@
                                                         </div>
                                                     @enderror
                                                 </div>
+                                                <div class="row row-cols-1 row-cols-md-2 g-4">
+                                                    <div class="col">
+                                                        <div class="card">
+                                                            <img src="{{ $data['image'] }}" class="card-img-top"
+                                                                alt="...">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="col-md-12">
                                                     <label for="image" class="form-label">Image</label>
-                                                    <input type="file" class="form-control" id="image"
-                                                        name="image" value="{{ env('image') }}"
-                                                        placeholder="smtp">
+                                                    <input type="file" class="form-control" id="image" name="image"
+                                                        value="{{ env('image') }}" placeholder="smtp">
                                                     @error('image')
                                                         <div class="validation-error">
                                                             {{ $message }}
@@ -67,7 +72,7 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <label for="description" class="form-label">Description</label>
-                                                    <textarea class="form-control" id="description" rows="5" name="description">{{$about['description']}}</textarea>
+                                                    <textarea class="form-control" id="description" rows="5" name="description">{{ $data['description'] }}</textarea>
                                                     @error('content')
                                                         <div class="validation-error">
                                                             {{ $message }}
