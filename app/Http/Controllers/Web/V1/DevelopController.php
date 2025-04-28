@@ -49,7 +49,6 @@ class DevelopController
 
             return redirect()->back()->with('t-success', 'Content Saved');
         } catch (Exception $e) {
-            dd($e->getMessage());
             return redirect()->back()->with('t-error', 'Something went wrong..!');
         }
     }
