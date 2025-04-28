@@ -3,11 +3,9 @@
 namespace App\Http\Controllers\Web\V1;
 
 use App\Models\Section;
-use Exception;
 use Illuminate\Http\Request;
-use Random\Engine\Secure;
 
-class AboutController
+class DesignController
 {
     /**
      * show
@@ -15,8 +13,8 @@ class AboutController
      */
     public function show()
     {
-        $about = Section::select('description')->find(1);
-        return view('backend.layouts.about.edit', compact('about'));
+        $about = Section::select('description')->find(2);
+        return view('backend.layouts.design.edit', compact('about'));
     }
 
 
