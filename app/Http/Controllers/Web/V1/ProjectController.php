@@ -79,7 +79,7 @@ class ProjectController
         try {
             if (isset($validatedData['image'])) {
                 Helper::deleteFile($project['image']);
-                $image = Helper::uploadFile($validatedData['image'], 'section/design');
+                $image = Helper::uploadFile($validatedData['image'], 'project');
                 $project->image = $image;
             }
 
