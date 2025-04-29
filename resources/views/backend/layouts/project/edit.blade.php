@@ -25,6 +25,11 @@
                                     <!-- Card -->
                                     <div class="mb-10 card">
                                         <div class="tab-content p-4" id="pills-tabContent-validation">
+                                            <form method="POST" action="{{route('v1.project.destroy', $project->id)}}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger mb-2">Delete</button>
+                                            </form>
                                             <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
                                                 <div class="col">
                                                     <div class="card position-relative">

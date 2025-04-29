@@ -105,8 +105,9 @@ class ProjectController
     public function destroy(Project $project): RedirectResponse
     {
         try {
+            Helper::deleteFile($project->image);
             $project->delete();
-            return redirect()->back()->with('t-success', 'Deleted Successfully');
+            return redirect()->route('v1.project.index')->with('t-success', 'Deleted Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
         }
