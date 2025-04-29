@@ -28,14 +28,17 @@
                                             <div class="row row-cols-1 row-cols-md-2 g-4 mb-4">
                                                 <div class="col">
                                                     <div class="card position-relative">
-                                                        <img src="{{ $project['image'] }}" class="card-img-top" alt="...">
+                                                        <img src="{{ $project['image'] }}" class="card-img-top"
+                                                            alt="...">
                                                     </div>
                                                 </div>
                                             </div>
                                             <!-- Validation Form -->
-                                            <form class="row g-3 needs-validation" action="{{ route('v1.brand.store') }}"
-                                                method="POST" enctype="multipart/form-data">
+                                            <form class="row g-3 needs-validation"
+                                                action="{{ route('v1.project.update', $project->id) }}" method="POST"
+                                                enctype="multipart/form-data">
                                                 @csrf
+                                                @method('PUT')
                                                 <div class="col-md-12">
                                                     <label for="title" class="form-label">Title*</label>
                                                     <input type="text" class="form-control" id="title" name="title"
@@ -98,7 +101,7 @@
                                                 </div>
                                                 <div class="col-md-12">
                                                     <label for="description" class="form-label">Description*</label>
-                                                    <textarea class="form-control" id="description" rows="5" name="description">{{$project['description']}}</textarea>
+                                                    <textarea class="form-control" id="description" rows="5" name="description">{{ $project['description'] }}</textarea>
                                                     @error('description')
                                                         <div class="validation-error">
                                                             {{ $message }}

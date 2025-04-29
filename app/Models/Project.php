@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
@@ -44,5 +45,24 @@ class Project extends Model
         } else {
             return asset('assets/backend/images/placeholder/placeholder-4by3.svg');
         }
+    }
+
+    /**
+     * getStartAttribute
+     * @param mixed $value
+     */
+    public function getStartAttribute($value)
+    {
+        return $value ? Carbon::parse($value)->format('Y-m-d') : null;
+    }
+
+    /**
+     * getEndAttribute
+     * @param mixed $value
+     * @return string|null
+     */
+    public function getEndAttribute($value)
+    {
+        return $value ? Carbon::parse($value)->format('Y-m-d') : null;
     }
 }

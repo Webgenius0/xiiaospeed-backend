@@ -64,7 +64,7 @@ class ProjectController
     public function update(Request $request, Project $project): RedirectResponse
     {
         try {
-
+            dd($project, $request->all());
             return redirect()->back()->with('t-success', 'Updated Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
