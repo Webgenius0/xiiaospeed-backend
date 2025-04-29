@@ -1,7 +1,7 @@
 @extends('backend.app')
 
 @section('title')
-    {{ env('APP_NAME') }} || Market
+    {{ env('APP_NAME') }} || Projects
 @endsection
 
 @section('content')
@@ -17,9 +17,9 @@
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div id="validation" class="mb-4">
-                                        <h2 class="h3 mb-1">Market Section Content</h2>
+                                        <h2 class="h3 mb-1">Projects Section</h2>
                                         <p>
-                                            This form will allow you to change the section content
+                                            The list of your projects
                                         </p>
                                     </div>
                                     <!-- Card -->
