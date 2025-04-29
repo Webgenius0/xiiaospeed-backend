@@ -126,7 +126,7 @@
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">title</a></li>
+                                <li><a href="#validation">Project Update Form</a></li>
                             </ul>
                         </div>
                     </div>

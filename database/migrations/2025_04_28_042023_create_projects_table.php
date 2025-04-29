@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('end')->nullable();
             $table->text('description');
             $table->string('url')->nullable();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('skills');
             $table->timestamps();
         });

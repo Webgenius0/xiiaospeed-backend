@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Web\V1;
 
+use App\Helpers\Helper;
 use App\Models\Project;
 use Exception;
 use Illuminate\Contracts\View\View;
@@ -60,11 +61,36 @@ class ProjectController
 
     /**
      * Update the specified resource in storage.
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Project $project
+     * @return RedirectResponse
      */
     public function update(Request $request, Project $project): RedirectResponse
     {
+        $validatedData = $request->validate([
+            'title'       => 'required|string',
+            'start'       => 'required|date',
+            'end'         => 'nullable|date',
+            'url'         => 'nullable|url',
+            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
+            'skills'      => 'required|string',
+            'description' => 'required|string',
+        ]);
         try {
-            dd($project, $request->all());
+            if (isset($validatedData['image'])) {
+                Helper::deleteFile($project['image']);
+                $image = Helper::uploadFile($validatedData['image'], 'section/design');
+                $project->image = $image;
+            }
+
+            $project->title = $validatedData['title'];
+            $project->start = $validatedData['start'];
+            $project->end = $validatedData['end'];
+            $project->url = $validatedData['url'];
+            $project->skills = $validatedData['skills'];
+            $project->description = $validatedData['description'];
+            $project->save();
+
             return redirect()->back()->with('t-success', 'Updated Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
