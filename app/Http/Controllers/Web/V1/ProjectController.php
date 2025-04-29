@@ -52,7 +52,7 @@ class ProjectController
     public function edit(Project $project): RedirectResponse|View
     {
         try {
-            return view('backend.layouts.project.edit');
+            return view('backend.layouts.project.edit', compact('project'));
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
         }

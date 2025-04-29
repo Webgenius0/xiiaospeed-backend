@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('start');
             $table->date('end')->nullable();
             $table->text('description');
-            $table->string('url');
+            $table->string('url')->nullable();
             $table->string('image');
             $table->string('skills');
             $table->timestamps();
