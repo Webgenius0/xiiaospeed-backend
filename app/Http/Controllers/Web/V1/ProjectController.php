@@ -16,7 +16,7 @@ class ProjectController
      */
     public function index(): View
     {
-        $projects = Project::paginate(10);
+        $projects = Project::all();
         $compact = ['projects' => $projects];
         return view('backend.layouts.project.index', $compact);
     }
@@ -64,7 +64,7 @@ class ProjectController
     public function update(Request $request, Project $project): RedirectResponse
     {
         try {
-            
+
             return redirect()->back()->with('t-success', 'Updated Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');

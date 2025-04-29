@@ -24,31 +24,7 @@
                                     </div>
                                     <!-- Card -->
                                     <div class="mb-10 card">
-                                        <!-- basic table -->
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Name</th>
-                                                    <th scope="col">Skill</th>
-                                                    <th scope="col">URL</th>
-                                                    <th scope="col">Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                @foreach ($projects as $project)
-                                                    <tr>
-                                                        <th scope="row">{{ $project->title ?? 'N/A' }}</th>
-                                                        <td>{{ $project->skills ?? 'N/A' }}</td>
-                                                        <td>{{ $project->url ?? 'N/A' }}</td>
-                                                        <td><a href="{{ route('v1.project.edit', $project->id) }}"><button
-                                                                    type="button"
-                                                                    class="btn btn-outline-dark mb-2">View</button></a></td>
-                                                    </tr>
-                                                @endforeach
-
-                                            </tbody>
-                                        </table>
-                                        <!-- basic table -->
+                                        {{-- ------------------------PUT YOUR CONTENT HEAR------------------------ --}}
                                     </div>
 
                                 </div>
@@ -62,7 +38,7 @@
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">Projects</a></li>
+                                <li><a href="#validation">Market</a></li>
                             </ul>
                         </div>
                     </div>
