@@ -60,6 +60,7 @@
                     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  d-none d-xl-block position-fixed end-0">
                         <!-- Sidebar nav fixed -->
                         <div class="sidebar-nav-fixed">
+                            <a href="{{route('v1.project.create')}}"><button type="button" class="btn btn-secondary-soft mb-2">Add New Project</button></a>
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
                                 <li><a href="#validation">Projects</a></li>

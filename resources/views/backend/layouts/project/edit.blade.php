@@ -85,7 +85,7 @@
                                                     @enderror
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <label for="image" class="form-label">Image*</label>
+                                                    <label for="image" class="form-label">Image</label>
                                                     <input type="file" class="form-control" id="image" name="image"
                                                           >
                                                     @error('image')

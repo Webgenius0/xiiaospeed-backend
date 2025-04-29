@@ -36,9 +36,30 @@ class ProjectController
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'title'       => 'required|string',
+            'start'       => 'required|date',
+            'end'         => 'nullable|date',
+            'url'         => 'nullable|url',
+            'image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
+            'skills'      => 'required|string',
+            'description' => 'required|string',
+        ]);
         try {
-
-            return redirect()->back()->with('t-success', 'Created Successfully');
+            $image = null;
+            if (isset($validatedData['image'])) {
+                $image = Helper::uploadFile($validatedData['image'], 'project');
+            }
+            Project::create([
+                'title'       => $validatedData['title'],
+                'start'       => $validatedData['start'],
+                'end'         => $validatedData['end'],
+                'url'         => $validatedData['url'],
+                'image'       => $image,
+                'skills'      => $validatedData['skills'],
+                'description' => $validatedData['description'],
+            ]);
+            return redirect()->route('v1.project.index')->with('t-success', 'Created Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
         }
