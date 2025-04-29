@@ -71,7 +71,7 @@
                                                 <div class="col-md-12">
                                                     <label for="image" class="form-label">Image</label>
                                                     <input type="file" class="form-control" id="image" name="image"
-                                                        value="{{ env('image') }}">
+                                                          >
                                                     @error('image')
                                                         <div class="validation-error">
                                                             {{ $message }}
