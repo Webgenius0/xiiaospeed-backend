@@ -4,23 +4,28 @@ namespace App\Http\Controllers\Web\V1;
 
 use App\Models\Project;
 use Exception;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 
 class ProjectController
 {
     /**
-     * Display a listing of the resource.
+     * index
+     * @return \Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index(): View
     {
-        return view('backend.layouts.project.index');
+        $projects = Project::paginate(10);
+        $compact = ['projects' => $projects];
+        return view('backend.layouts.project.index', $compact);
     }
 
     /**
      * Show the form for creating a new resource.
+     * @return
      */
-    public function create()
+    public function create(): View
     {
         return view('backend.layouts.project.create');
     }
@@ -41,8 +46,10 @@ class ProjectController
 
     /**
      * Show the form for editing the specified resource.
+     * @param \App\Models\Project $project
+     * @return RedirectResponse|View
      */
-    public function edit(Project $project)
+    public function edit(Project $project): RedirectResponse|View
     {
         try {
             return view('backend.layouts.project.edit');
@@ -54,10 +61,10 @@ class ProjectController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Project $project)
+    public function update(Request $request, Project $project): RedirectResponse
     {
         try {
-
+            
             return redirect()->back()->with('t-success', 'Updated Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
