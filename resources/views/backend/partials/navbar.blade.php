@@ -22,9 +22,10 @@
                     <a class="nav-link {{ Route::is('v1.introduction.show') ? 'active' : '' }}"
                         href="{{ route('v1.introduction.show') }}">
                         <div style="margin-right: 8px">
-                            <svg fill="{{ Route::is('v1.introduction.show') ? '#624bff' : '#a3aab4' }}" width="14px" version="1.1" id="Layer_1"
-                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 392.598 392.598" xml:space="preserve">
+                            <svg fill="{{ Route::is('v1.introduction.show') ? '#624bff' : '#a3aab4' }}" width="14px"
+                                version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 392.598 392.598"
+                                xml:space="preserve">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
@@ -59,6 +60,30 @@
                                 </g>
                             </svg>
                         </div>Introduction
+                    </a>
+                </li>
+                {{-- about --}}
+                <li class="nav-item">
+                    <a class="nav-link {{ Route::is('v1.project.*') ? 'active' : '' }}"
+                        href="{{ route('v1.project.index') }}">
+                        <div style="margin-right: 8px">
+                            <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" width="14px"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" fill="{{ Route::is('v1.project.*') ? '#624bff' : '#a3aab4' }}">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <title>project-configuration</title>
+                                    <g id="Page-1" stroke="none" stroke-width="1" fill="none"
+                                        fill-rule="evenodd">
+                                        <g id="icon" fill="{{ Route::is('v1.project.index') ? '#624bff' : '#a3aab4' }}" transform="translate(42.666667, 42.666667)">
+                                            <path
+                                                d="M277.333333,234.666667 L277.333,255.999667 L298.666667,256 L298.666667,298.666667 L277.333,298.666667 L277.333333,426.666667 L256,426.666667 L256,298.666667 L234.666667,298.666667 L234.666667,256 L256,255.999667 L256,234.666667 L277.333333,234.666667 Z M341.333333,234.666667 L341.333,341.332667 L362.666667,341.333333 L362.666667,384 L341.333,383.999667 L341.333333,426.666667 L320,426.666667 L320,383.999667 L298.666667,384 L298.666667,341.333333 L320,341.332667 L320,234.666667 L341.333333,234.666667 Z M405.333333,234.666667 L405.333,277.332667 L426.666667,277.333333 L426.666667,320 L405.333,319.999667 L405.333333,426.666667 L384,426.666667 L384,319.999667 L362.666667,320 L362.666667,277.333333 L384,277.332667 L384,234.666667 L405.333333,234.666667 Z M170.666667,7.10542736e-15 L341.333333,96 L341.333,213.333 L298.666,213.333 L298.666,138.747 L192,200.331 L192,323.018 L213.333,311.018 L213.333333,320 L234.666667,320 L234.666,348 L170.666667,384 L3.55271368e-14,288 L3.55271368e-14,96 L170.666667,7.10542736e-15 Z M42.666,139.913 L42.6666667,263.04 L149.333,323.022 L149.333,201.497 L42.666,139.913 Z M170.666667,48.96 L69.246,105.991 L169.656,163.963 L271.048,105.424 L170.666667,48.96 Z"
+                                                id="Combined-Shape"> </path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>Project
                     </a>
                 </li>
                 {{-- about --}}
@@ -122,7 +147,8 @@
                     <a class="nav-link {{ Route::is('v1.brand.show') ? 'active' : '' }}"
                         href="{{ route('v1.brand.show') }}">
                         <div style="margin-right: 8px">
-                            <svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none" width="14px">
+                            <svg viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                width="14px">
                                 <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                 <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                                 <g id="SVGRepo_iconCarrier">
