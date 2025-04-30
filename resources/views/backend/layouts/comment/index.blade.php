@@ -28,19 +28,19 @@
                                         <table class="table">
                                             <thead>
                                                 <tr>
+                                                    <th scope="col">Image</th>
                                                     <th scope="col">Name</th>
-                                                    <th scope="col">Skill</th>
-                                                    <th scope="col">URL</th>
+                                                    <th scope="col">Title</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                @foreach ($projects as $project)
+                                                @foreach ($comments as $comment)
                                                     <tr>
-                                                        <th scope="row">{{ $project->title ?? 'N/A' }}</th>
-                                                        <td>{{ $project->skills ?? 'N/A' }}</td>
-                                                        <td>{{ $project->url ?? 'N/A' }}</td>
-                                                        <td><a href="{{ route('v1.project.edit', $project->id) }}"><button
+                                                        <td ><img src="{{$comment->image}}" alt="Image" class="avatar-md avatar rounded-circle"></td>
+                                                        <th scope="row">{{ $comment->name ?? 'N/A' }}</th>
+                                                        <td>{{ $comment->title ?? 'N/A' }}</td>
+                                                        <td><a href="{{ route('v1.project.edit', $comment->id) }}"><button
                                                                     type="button"
                                                                     class="btn btn-outline-dark mb-2">View</button></a></td>
                                                     </tr>

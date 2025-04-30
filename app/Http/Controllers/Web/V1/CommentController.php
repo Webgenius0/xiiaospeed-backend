@@ -17,8 +17,8 @@ class CommentController
      */
     public function index(): View
     {
-        $projects = Comment::all();
-        $compact = ['projects' => $projects];
+        $comments = Comment::all();
+        $compact = ['comments' => $comments];
         return view('backend.layouts.comment.index', $compact);
     }
 
