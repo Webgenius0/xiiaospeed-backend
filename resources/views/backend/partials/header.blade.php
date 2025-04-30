@@ -17,7 +17,7 @@
 
             <div class="d-none d-md-none d-lg-block">
                 <!-- Form -->
-                <form action="#">
+                {{-- <form action="#">
 
 
                     <div class="input-group ">
@@ -35,7 +35,7 @@
                             </button>
                         </span>
                     </div>
-                </form>
+                </form> --}}
             </div>
             <!--Navbar nav -->
             <ul class="navbar-nav navbar-right-wrap ms-lg-auto d-flex nav-top-wrap align-items-center ms-4 ms-lg-0">
@@ -48,10 +48,10 @@
                 </li>
 
                 <li class="dropdown stopevent ms-2">
-                    <a class="btn btn-ghost btn-icon rounded-circle" href="#!" role="button"
+                    {{-- <a class="btn btn-ghost btn-icon rounded-circle" href="#!" role="button"
                         id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-xs" data-feather="bell"></i>
-                    </a>
+                    </a> --}}
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end"
                         aria-labelledby="dropdownNotification">
                         <div>
@@ -151,7 +151,7 @@
 
 
                             <div class="lh-1 ">
-                                <h5 class="mb-1"> John E. Grainger</h5>
+                                <h5 class="mb-1">{{auth()->user()->first_name . ' '. auth()->user()->last_name}}</h5>
                                 <a href="#!" class="text-inherit fs-6">View my profile</a>
                             </div>
                             <div class=" dropdown-divider mt-3 mb-2"></div>
@@ -159,7 +159,7 @@
 
                         <ul class="list-unstyled">
 
-                            <li>
+                            {{-- <li>
                                 <a class="dropdown-item d-flex align-items-center" href="#!">
                                     <i class="me-2 icon-xxs dropdown-item-icon" data-feather="user"></i>Edit
                                     Profile
@@ -180,7 +180,7 @@
 
                                     <i class="me-2 icon-xxs dropdown-item-icon" data-feather="settings"></i>Settings
                                 </a>
-                            </li>
+                            </li> --}}
                             <li>
                                 <form class="dropdown-item" method="POST" action="{{ route('logout') }}">
                                     @csrf
