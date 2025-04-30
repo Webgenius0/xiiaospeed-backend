@@ -21,6 +21,7 @@ return new class extends Migration
         });
 
 
+        // Insert default roles
         DB::table('roles')->insert([
             [
                 'slug' => 'admin',
