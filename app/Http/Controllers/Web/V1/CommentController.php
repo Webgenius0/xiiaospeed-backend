@@ -120,7 +120,7 @@ class CommentController
         try {
             Helper::deleteFile($comment->image);
             $comment->delete();
-            return redirect()->route('v1.project.index')->with('t-success', 'Deleted Successfully');
+            return redirect()->route('v1.comment.index')->with('t-success', 'Deleted Successfully');
         } catch (Exception $e) {
             return redirect()->back()->with('t-error', 'Something went wrong');
         }
