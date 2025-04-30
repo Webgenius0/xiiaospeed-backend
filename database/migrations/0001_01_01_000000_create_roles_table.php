@@ -22,20 +22,20 @@ return new class extends Migration
 
 
         // Insert default roles
-        DB::table('roles')->insert([
-            [
-                'slug' => 'admin',
-                'name' => 'Admin',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-            [
-                'slug' => 'user',
-                'name' => 'User',
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
-        ]);
+        // DB::table('roles')->insert([
+        //     [
+        //         'slug' => 'admin',
+        //         'name' => 'Admin',
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
+        //     ],
+        //     [
+        //         'slug' => 'user',
+        //         'name' => 'User',
+        //         'created_at' => now(),
+        //         'updated_at' => now(),
+        //     ],
+        // ]);
     }
 
     /**
