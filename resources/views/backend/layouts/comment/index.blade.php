@@ -40,7 +40,7 @@
                                                         <td ><img src="{{$comment->image}}" alt="Image" class="avatar-md avatar rounded-circle"></td>
                                                         <th scope="row">{{ $comment->name ?? 'N/A' }}</th>
                                                         <td>{{ $comment->title ?? 'N/A' }}</td>
-                                                        <td><a href="{{ route('v1.project.edit', $comment->id) }}"><button
+                                                        <td><a href="{{ route('v1.comment.edit', $comment->id) }}"><button
                                                                     type="button"
                                                                     class="btn btn-outline-dark mb-2">View</button></a></td>
                                                     </tr>

@@ -9,8 +9,8 @@ Route::prefix('comment')->name('v1.comment.')->controller(CommentController::cla
     Route::get('/', 'index')->name('index');
     Route::post('/', 'store')->name(name: 'store');
     Route::get('/create', 'create')->name(name: 'create');
-    Route::get('/{project}', 'edit')->name('edit');
-    Route::put('/{project}', 'update')->name('update');
-    Route::delete('/{project}', 'destroy')->name('destroy');
+    Route::get('/{comment}', 'edit')->name('edit');
+    Route::put('/{comment}', 'update')->name('update');
+    Route::delete('/{comment}', 'destroy')->name('destroy');
 });
 

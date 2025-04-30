@@ -40,9 +40,9 @@ class CommentController
     public function store(Request $request): RedirectResponse
     {
         $validatedData = $request->validate([
-            'name'       => 'required|string',
-            'title'       => 'required|string',
-            'image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
+            'name'    => 'required|string',
+            'title'   => 'required|string',
+            'image'   => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
             'content' => 'required|string',
         ]);
         try {
@@ -87,13 +87,10 @@ class CommentController
     public function update(Request $request, Comment $comment): RedirectResponse
     {
         $validatedData = $request->validate([
-            'title'       => 'required|string',
-            'start'       => 'required|date',
-            'end'         => 'nullable|date',
-            'url'         => 'nullable|url',
-            'image'       => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
-            'skills'      => 'required|string',
-            'description' => 'required|string',
+            'name'    => 'required|string',
+            'title'   => 'required|string',
+            'image'   => 'nullable|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
+            'content' => 'required|string',
         ]);
         try {
             if (isset($validatedData['image'])) {
@@ -102,12 +99,9 @@ class CommentController
                 $comment->image = $image;
             }
 
+            $comment->name = $validatedData['title'];
             $comment->title = $validatedData['title'];
-            $comment->start = $validatedData['start'];
-            $comment->end = $validatedData['end'];
-            $comment->url = $validatedData['url'];
-            $comment->skills = $validatedData['skills'];
-            $comment->description = $validatedData['description'];
+            $comment->content = $validatedData['content'];
             $comment->save();
 
             return redirect()->back()->with('t-success', 'Updated Successfully');
