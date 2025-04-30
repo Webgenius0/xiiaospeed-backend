@@ -13,4 +13,5 @@ Route::get('/dashboard', function () {
 require 'v1/auth.php';
 require 'v1/section.php';
 require 'v1/project.php';
+require 'v1/comment.php';
 require 'v1/settings/mail.php';
