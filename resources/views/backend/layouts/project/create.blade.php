@@ -19,7 +19,7 @@
                                     <div id="validation" class="mb-4">
                                         <h2 class="h3 mb-1">Project</h2>
                                         <p>
-                                            This form will allow you to change the project content
+                                            This form will allow you to create project
                                         </p>
                                     </div>
                                     <!-- Card -->
@@ -116,7 +116,7 @@
                         <div class="sidebar-nav-fixed">
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">Project Update Form</a></li>
+                                <li><a href="#validation">Project Form</a></li>
                             </ul>
                         </div>
                     </div>

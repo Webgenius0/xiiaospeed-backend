@@ -33,8 +33,10 @@ class ProjectController
 
     /**
      * Store a newly created resource in storage.
+     * @param \Illuminate\Http\Request $request
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $validatedData = $request->validate([
             'title'       => 'required|string',

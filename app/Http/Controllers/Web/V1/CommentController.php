@@ -8,6 +8,7 @@ use Exception;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class CommentController
 {
@@ -33,17 +34,16 @@ class CommentController
 
     /**
      * Store a newly created resource in storage.
+     * @param \Illuminate\Http\Request $request
+     * @return RedirectResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $validatedData = $request->validate([
+            'name'       => 'required|string',
             'title'       => 'required|string',
-            'start'       => 'required|date',
-            'end'         => 'nullable|date',
-            'url'         => 'nullable|url',
             'image'       => 'required|image|mimes:jpeg,png,jpg,gif,svg,webp|max:30720',
-            'skills'      => 'required|string',
-            'description' => 'required|string',
+            'content' => 'required|string',
         ]);
         try {
             $image = null;
@@ -51,16 +51,14 @@ class CommentController
                 $image = Helper::uploadFile($validatedData['image'], 'comment');
             }
             Comment::create([
+                'name'       => $validatedData['name'],
                 'title'       => $validatedData['title'],
-                'start'       => $validatedData['start'],
-                'end'         => $validatedData['end'],
-                'url'         => $validatedData['url'],
                 'image'       => $image,
-                'skills'      => $validatedData['skills'],
-                'description' => $validatedData['description'],
+                'content' => $validatedData['content'],
             ]);
-            return redirect()->route('v1.project.index')->with('t-success', 'Created Successfully');
+            return redirect()->route('v1.comment.index')->with('t-success', 'Created Successfully');
         } catch (Exception $e) {
+            Log::error($e->getMessage());
             return redirect()->back()->with('t-error', 'Something went wrong');
         }
     }

@@ -1,7 +1,7 @@
 @extends('backend.app')
 
 @section('title')
-    {{ env('APP_NAME') }} || Projects
+    {{ env('APP_NAME') }} || Comment
 @endsection
 
 @section('content')
@@ -17,9 +17,9 @@
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                     <div id="validation" class="mb-4">
-                                        <h2 class="h3 mb-1">Projects Section</h2>
+                                        <h2 class="h3 mb-1">Comment Section</h2>
                                         <p>
-                                            The list of your projects
+                                            The list of your comments
                                         </p>
                                     </div>
                                     <!-- Card -->
@@ -60,10 +60,10 @@
                     <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12  d-none d-xl-block position-fixed end-0">
                         <!-- Sidebar nav fixed -->
                         <div class="sidebar-nav-fixed">
-                            <a href="{{route('v1.project.create')}}"><button type="button" class="btn btn-secondary-soft mb-2">Add New Project</button></a>
+                            <a href="{{route('v1.comment.create')}}"><button type="button" class="btn btn-secondary-soft mb-2">Add New Project</button></a>
                             <span class="px-4 mb-2 d-block text-uppercase ls-md h3 fs-6">Contents</span>
                             <ul class="list-unstyled">
-                                <li><a href="#validation">Projects</a></li>
+                                <li><a href="#validation">comment</a></li>
                             </ul>
                         </div>
                     </div>
