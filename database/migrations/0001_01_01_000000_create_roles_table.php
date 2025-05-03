@@ -7,6 +7,17 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
+    // ---------------------------
+    //  id | role     | slug     |
+    // ---------------------------
+    //  1  | Admin    | admin    |
+    // ---------------------------
+    //  2  | Tenant   | tenant   |
+    // ---------------------------
+    //  3  | Landlord | landlord |
+    // ---------------------------
+    //  4  | Plumber  | plumber  |
+    // ---------------------------
     /**
      * Run the migrations.
      */
@@ -19,23 +30,6 @@ return new class extends Migration
             $table->softDeletes();
             $table->timestamps();
         });
-
-
-        // Insert default roles
-        // DB::table('roles')->insert([
-        //     [
-        //         'slug' => 'admin',
-        //         'name' => 'Admin',
-        //         'created_at' => now(),
-        //         'updated_at' => now(),
-        //     ],
-        //     [
-        //         'slug' => 'user',
-        //         'name' => 'User',
-        //         'created_at' => now(),
-        //         'updated_at' => now(),
-        //     ],
-        // ]);
     }
 
     /**
