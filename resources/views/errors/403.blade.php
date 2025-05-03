@@ -1,25 +1,20 @@
-@extends('frontend.app')
-
-@push('style')
-    <style>
-        .error-page-body {
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .full-screen-image {
-            width: 500px;
-        }
-    </style>
-@endpush
+@extends('errors.app')
 
 @section('title')
-    Forbidden..!
+    {{ env('APP_NAME') }} || 403
 @endsection
 
-@section('main')
-    <main class="error-page-body">
-        <img class="full-screen-image" src="{{asset('frontend/assets/images/errors/403.svg')}}" alt="">
-    </main>
+@section('content')
+    <div class="text-center">
+        <div class="mb-3">
+            <!-- img -->
+            <img src="{{asset('assets/custom/svg/403.svg')}}" alt="Image" class="img-fluid">
+        </div>
+        <!-- text -->
+        <h1 class="display-4 ">Oops! you are forbidden to access this.</h1>
+        <p class="mb-4">Or simply leverage the expertise of our consultation
+            team.</p>
+        <!-- button -->
+        <a href="{{route("dashboard")}}" class="btn btn-primary">Go Home</a>
+    </div>
 @endsection
